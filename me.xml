@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="me" fetch="https://github.com/xenxynon/" />
+  <remove-project name="LineageOS/bionic" />
+  <project path="bionic" name="bionic" remote="me" revision="y"/>
+  </manifest>
