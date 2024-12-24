@@ -1,40 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+
+  <remote  name="aospa"
+           fetch="https://github.com/AOSPA"
+           revision="vauxite"/>
+
+  <remote  name="blobs"
+           fetch="https://github.com/ThankYouMario"
+           revision="vauxite" />
+
+  <remote  name="blobs-gitlab"
+           fetch="https://gitlab.com/ThankYouMario"
+           revision="vauxite" />
 <manifest>
-  <remote name="me" fetch="https://github.com/xenxynon/" />
-
-  <remove-project name="android_frameworks_libs_systemui" />
-  <remove-project name="android_vendor_aospa" />
-  <remove-project name="android_frameworks_base" />
-  <remove-project name="android_packages_apps_Launcher3" />
-  <remove-project name="android_packages_apps_Updater" />
-  <remove-project name="android_packages_apps_Settings" />
-  <remove-project name="android_vendor_google_gms" />
-  <remove-project name="android_vendor_google_pixel" />
-  <remove-project name="AOSPA/android_bootable_recovery" />
-  <remove-project name="android_build" />
-
-  <project path="build/make" name="HormYFumcKerZ/android_build" remote="github" revision="unity" >
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="me" revision="uvite"/>
-  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="me" revision="unity"/>
-  <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="me" revision="patch-1"/>
-  <project path="vendor/google/gms" name="xenxynon/android_vendor_google_gms" remote="gitlab" revision="uvite"/>
-  <project path="packages/apps/Updater" name="pg_up" remote="me" revision="unity"/>
-  <project path="vendor/aospa" name="android_vendor_aospa" remote="me" revision="unity">
-    <linkfile src="build.sh" dest="rom-build.sh" />
-  </project>
-  <project path="frameworks/base" name="penguin" remote="me" revision="unity"/>
-  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3-1" remote="me" revision="unity"/>
-  <project path="packages/apps/Settings" name="penguin_set" remote="me" revision="unity"/>  
-  <project path="vendor/custom/stuff" name="vendor_custom_stuff" remote="me" revision="Main"/>  
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="AOSPA/android_hardware_qcom_audio" remote="aospa" revision="vauxite-888"/>
+  <project path="hardware/qcom/display" name="AOSPA/android_hardware_qcom_display" remote="aospa" revision="vauxite-888"/>
+  <project path="hardware/qcom/gps" name="AOSPA/android_hardware_qcom_gps" remote="aospa" revision="vauxite-legacy-component"/>
+  <project path="hardware/qcom/media" name="AOSPA/android_hardware_qcom_media" remote="aospa" revision="vauxite-888"/>
   
-  <!-- Example for removing and adding projects -->
-  <!-- <remove-project name="LineageOS/android_frameworks_native" /> -->
-  <!-- <project path="frameworks/native" name="android_frameworks_native" remote="lext" revision="lineage-21.0" clone-depth="1" /> -->
+  <project path="device/nothing/phone1" name="xenxynon/android_device_nothing_phone1" remote="github" revision="vauxite" />  <project path="kernel/msm-5.4" name="AOSPA/android_kernel_nothing_sm7325" remote="aospa" revision="vauxite" />
+  <project path="packages/apps/ParanoidGlyph" name="AOSPA/android_packages_apps_ParanoidGlyph" remote="aospa" revision="vauxite" />
+  <project path="vendor/nothing" name="xenxynon/proprietary_vendor_nothing" remote="github" revision="vauxite" clone-depth="1" />
+  <project path="vendor/nothing/camera" name="proprietary_vendor_nothing_camera" remote="blobs-gitlab" revision="vauxite" clone-depth="1" />
+  <project path="vendor/nothing/firmware" name="proprietary_vendor_nothing_firmware" remote="blobs-gitlab" revision="vauxite" clone-depth="1" />
 </manifest>
