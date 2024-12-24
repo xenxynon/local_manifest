@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-
+<manifest>
   <remote  name="aospa"
            fetch="https://github.com/AOSPA"
            revision="vauxite"/>
@@ -11,7 +11,7 @@
   <remote  name="blobs-gitlab"
            fetch="https://gitlab.com/ThankYouMario"
            revision="vauxite" />
-<manifest>
+
   <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="AOSPA/android_hardware_qcom_audio" remote="aospa" revision="vauxite-888"/>
   <project path="hardware/qcom/display" name="AOSPA/android_hardware_qcom_display" remote="aospa" revision="vauxite-888"/>
   <project path="hardware/qcom/gps" name="AOSPA/android_hardware_qcom_gps" remote="aospa" revision="vauxite-legacy-component"/>
